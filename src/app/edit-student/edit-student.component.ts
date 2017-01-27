@@ -1,5 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { StudentService } from '../student.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormsModule }  from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-edit-student',
@@ -9,8 +12,18 @@ import { StudentService } from '../student.service';
 })
 export class EditStudentComponent implements OnInit {
   @Input() selectedStudent;
+  form: FormGroup;
 
-  constructor(private studentService: StudentService) { }
+  constructor(private studentService: StudentService, private fb: FormBuilder, private router: Router) {
+    this.form = fb.group({
+      'firstname' : ['', Validators.required],
+      'lastname' : ['', Validators.required],
+      'track' : ['', Validators.required],
+      'currentlanguage' : ['', Validators.required],
+      'currentlevel' : ['', Validators.pattern('^[0-9]+$')],
+      'treehousepoints' : ['', Validators.pattern('^[0-9]+$')]
+    })
+   }
 
   ngOnInit() {
   }
