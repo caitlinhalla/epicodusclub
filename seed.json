@@ -2,16 +2,22 @@
     "firstname": "Timmy",
     "lastname": "Beans",
     "track": "Ruby",
+    "currentlanguage": "JavaScript",
+    "currentlevel": 2,
     "treehousepoints": 6542
     }, {
     "firstname": "Sally",
     "lastname": "Potato",
     "track": "PHP",
+    "currentlanguage": "JavaScript",
+    "currentlevel": 2,
     "treehousepoints": 1235
       }, {
     "firstname": "Rita",
     "lastname": "Pie",
-    "track": "Design",
+    "track": "CSS",
+    "currentlanguage": "Intro",
+    "currentlevel": 1,
     "treehousepoints": 12345
   }]
 }

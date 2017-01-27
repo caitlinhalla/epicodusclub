@@ -13,6 +13,7 @@ import { StudentListComponent } from './student-list/student-list.component';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { StudentDetailComponent } from './student-detail/student-detail.component';
+import { LanguagePipe } from './language.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -27,7 +28,8 @@ export const firebaseConfig = {
     IndexComponent,
     AboutComponent,
     StudentListComponent,
-    StudentDetailComponent
+    StudentDetailComponent,
+    LanguagePipe
   ],
   imports: [
     BrowserModule,

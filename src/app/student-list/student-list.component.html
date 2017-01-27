@@ -1,3 +1,20 @@
+<!-- <select (change)="onChange($event.target.value)">
+  <option value="allStudents" selected="selected">All Students</option>
+  <option value="rubyStudents">Ruby Students</option>
+  <option value="phpStudents">PHP Students</option>
+  <option value="c#Students">C# Students</option>
+  <option value="cssStudents">CSS Students</option>
+  <option value="javaStudents">Java Students</option>
+  <option value="introStudents">Intro Students</option>
+  <option value="javaScriptStudents">JavaScript Students</option>
+  <option value="railsStudents">Rails Students</option>
+  <option value="drupalStudents">Drupal Students</option>
+  <option value="androidStudents">Android Students</option>
+  <option value="netStudents">.Net Students</option>
+  <option value="designStudents">Design Students</option>
+</select> -->
+
+
 <md-card *ngFor="let student of students | async" (click)="goToDetailPage(student)">
    <md-card-content>
       <h3>{{student.firstname}} {{student.lastname}}</h3>
