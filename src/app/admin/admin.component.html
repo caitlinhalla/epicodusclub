@@ -4,42 +4,42 @@
   </div>
 
   <div class="panel-body">
-    <div>
+    <div [ngClass]="{'has-error':!form.controls['firstname'].valid && form.controls['firstname'].touched}">
       <label>First Name:</label>
       <br>
       <input #newFirstName [formControl]="form.controls['firstname']">
     </div>
 
-    <div>
+    <div [ngClass]="{'has-error':!form.controls['lastname'].valid && form.controls['lastname'].touched}">
       <label>Last Name:</label>
       <br>
       <input #newLastName [formControl]="form.controls['lastname']">
     </div>
 
-    <div>
+    <div [ngClass]="{'has-error':!form.controls['track'].valid  && form.controls['track'].touched}">
       <label>Track:</label>
       <br>
-      <input #newTrack ngModel required>
+      <input #newTrack [formControl]="form.controls['track']">
     </div>
 
-    <div>
+    <div [ngClass]="{'has-error':!form.controls['currentlanguage'].valid && form.controls['currentlanguage'].touched}">
       <label>Current Language:</label>
       <br>
-      <input #newCurrentLanguage ngModel required>
+      <input #newCurrentLanguage  [formControl]="form.controls['currentlanguage']">
     </div>
 
-    <div>
+    <div [ngClass]="{'has-error':!form.controls['currentlevel'].valid && form.controls['currentlevel'].touched}">
       <label>Current Level:</label>
       <br>
-      <input #newCurrentLevel ngModel pattern="[A-Za-z]">
+      <input #newCurrentLevel [formControl]="form.controls['currentlevel']">
     </div>
 
-    <div>
+    <div [ngClass]="{'has-error':!form.controls['treehousepoints'].valid && form.controls['treehousepoints'].touched}">
       <label>Treehouse Points:</label>
       <br>
-      <input #newTreehousePoints ngModel required>
+      <input #newTreehousePoints [formControl]="form.controls['treehousepoints']">
     </div>
-    <button [disabled]="!form.valid" (click)="submitForm(newFirstName.value, newLastName.value, newTrack.value, newCurrentLanguage.value, newCurrentLevel.value, newTreehousePoints.value); newFirstName.value=''; newLastName.value=''; newTrack.value=''; newCurrentLanguage.value=''; newCurrentLevel.value=''; newTreehousePoints.value=''">Add</button>
+    <button [disabled]="!form.valid" (click)="submitForm(newFirstName.value, newLastName.value, newTrack.value, newCurrentLanguage.value, newCurrentLevel.value, newTreehousePoints.value); newFirstName.value=null; newLastName.value=null; newTrack.value=null; newCurrentLanguage.value=null; newCurrentLevel.value=null; newTreehousePoints.value=''">Add</button>
   </div>
 </div>
 
