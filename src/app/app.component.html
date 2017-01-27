@@ -1,4 +1,9 @@
-<h1>
-  {{title}}
-</h1>
-<router-outlet></router-outlet>
+<md-toolbar class="navBar">
+  <span class="navLink"><a routerLink="/">Epicodus Club</a></span>
+  <span class="example-fill-remaining-space"></span>
+  <span class="navLink"><a routerLink="about">About</a></span>
+</md-toolbar>
+
+<div class="app-content">
+  <router-outlet></router-outlet>
+</div>

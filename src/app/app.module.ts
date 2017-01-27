@@ -8,11 +8,13 @@ import 'hammerjs';
 import { AppComponent } from './app.component';
 import { IndexComponent } from './index/index.component';
 import { routing } from './app.routing';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    IndexComponent
+    IndexComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

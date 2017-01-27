@@ -1,0 +1,25 @@
+$white: #fff;
+$black: #000;
+
+// navbar
+.navBar{
+  background: transparentize($white, 1);
+}
+
+.example-fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.navLink {
+  padding: 10px;
+  :hover, :active, :visited {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+// headers
+
+h1 {
+  text-align: center;
+}
