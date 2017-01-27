@@ -9,12 +9,14 @@ import { AppComponent } from './app.component';
 import { IndexComponent } from './index/index.component';
 import { routing } from './app.routing';
 import { AboutComponent } from './about/about.component';
+import { StudentListComponent } from './student-list/student-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IndexComponent,
-    AboutComponent
+    AboutComponent,
+    StudentListComponent
   ],
   imports: [
     BrowserModule,
