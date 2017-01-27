@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Student } from '../student.model';
 import { AngularFire, FirebaseObjectObservable } from 'angularfire2';
 import { StudentService } from '../student.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+
 
 @Component({
   selector: 'app-admin',
@@ -10,8 +13,14 @@ import { StudentService } from '../student.service';
   providers: [StudentService]
 })
 export class AdminComponent implements OnInit {
+  form: FormGroup;
 
-  constructor(private studentService: StudentService) { }
+  constructor(private studentService: StudentService, private fb: FormBuilder) {
+    this.form = fb.group({
+      'firstname' : [null, Validators.required],
+      'lastname' : [null, Validators.required]
+    })
+   }
 
   ngOnInit() {
   }

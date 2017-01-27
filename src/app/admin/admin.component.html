@@ -7,39 +7,39 @@
     <div>
       <label>First Name:</label>
       <br>
-      <input #newFirstName>
+      <input #newFirstName [formControl]="form.controls['firstname']">
     </div>
 
     <div>
       <label>Last Name:</label>
       <br>
-      <input #newLastName>
+      <input #newLastName [formControl]="form.controls['lastname']">
     </div>
 
     <div>
       <label>Track:</label>
       <br>
-      <input #newTrack>
+      <input #newTrack ngModel required>
     </div>
 
     <div>
       <label>Current Language:</label>
       <br>
-      <input #newCurrentLanguage>
+      <input #newCurrentLanguage ngModel required>
     </div>
 
     <div>
       <label>Current Level:</label>
       <br>
-      <input #newCurrentLevel>
+      <input #newCurrentLevel ngModel pattern="[A-Za-z]">
     </div>
 
     <div>
       <label>Treehouse Points:</label>
       <br>
-      <input #newTreehousePoints>
+      <input #newTreehousePoints ngModel required>
     </div>
-    <button (click)="submitForm(newFirstName.value, newLastName.value, newTrack.value, newCurrentLanguage.value, newCurrentLevel.value, newTreehousePoints.value); newFirstName.value=''; newLastName.value=''; newTrack.value=''; newCurrentLanguage.value=''; newCurrentLevel.value=''; newTreehousePoints.value=''">Add</button>
+    <button [disabled]="!form.valid" (click)="submitForm(newFirstName.value, newLastName.value, newTrack.value, newCurrentLanguage.value, newCurrentLevel.value, newTreehousePoints.value); newFirstName.value=''; newLastName.value=''; newTrack.value=''; newCurrentLanguage.value=''; newCurrentLevel.value=''; newTreehousePoints.value=''">Add</button>
   </div>
 </div>
 
