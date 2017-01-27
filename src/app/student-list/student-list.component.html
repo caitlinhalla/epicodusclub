@@ -1,8 +1,6 @@
-<md-card *ngFor="let student of students">
-   <!-- <img md-card-image src="{{student.image}}">
+<md-card *ngFor="let student of students | async">
    <md-card-content>
-      <h3>{{student.title}}</h3>
-      <p>{{student.description}}</p>
-      <p>{{student.languages}}</p>
-   </md-card-content> -->
+      <h3>{{student.firstname}} {{student.lastname}}</h3>
+      <p>{{student.track}}</p>
+   </md-card-content>
 </md-card>

@@ -1,0 +1,17 @@
+{ "students": [{
+    "firstname": "Timmy",
+    "lastname": "Beans",
+    "track": "Ruby",
+    "treehousepoints": 6542
+    }, {
+    "firstname": "Sally",
+    "lastname": "Potato",
+    "track": "PHP",
+    "treehousepoints": 1235
+      }, {
+    "firstname": "Rita",
+    "lastname": "Pie",
+    "track": "Design",
+    "treehousepoints": 12345
+  }]
+}

@@ -10,6 +10,15 @@ import { IndexComponent } from './index/index.component';
 import { routing } from './app.routing';
 import { AboutComponent } from './about/about.component';
 import { StudentListComponent } from './student-list/student-list.component';
+import { masterFirebaseConfig } from './api-keys';
+import { AngularFireModule } from 'angularfire2';
+
+export const firebaseConfig = {
+  apiKey: masterFirebaseConfig.apiKey,
+  authDomain: masterFirebaseConfig.authDomain,
+  databaseURL: masterFirebaseConfig.databaseURL,
+  storageBucket: masterFirebaseConfig.storageBucket
+};
 
 @NgModule({
   declarations: [
@@ -23,7 +32,8 @@ import { StudentListComponent } from './student-list/student-list.component';
     FormsModule,
     HttpModule,
     MaterialModule.forRoot(),
-    routing
+    routing,
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
