@@ -18,4 +18,8 @@ export class StudentService {
     return this.angularFire.database.object('students/' + studentId);
   }
 
+  addStudent(newStudent: Student){
+    this.students.push(newStudent);
+  }
+
 }

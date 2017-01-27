@@ -1,0 +1,44 @@
+<div class="container panel panel-default">
+  <div class="panel-heading">
+    <h3>Add Student to Epicodus</h3>
+  </div>
+
+  <div class="panel-body">
+    <div>
+      <label>First Name:</label>
+      <br>
+      <input #newFirstName>
+    </div>
+
+    <div>
+      <label>Last Name:</label>
+      <br>
+      <input #newLastName>
+    </div>
+
+    <div>
+      <label>Track:</label>
+      <br>
+      <input #newTrack>
+    </div>
+
+    <div>
+      <label>Current Language:</label>
+      <br>
+      <input #newCurrentLanguage>
+    </div>
+
+    <div>
+      <label>Current Level:</label>
+      <br>
+      <input #newCurrentLevel>
+    </div>
+
+    <div>
+      <label>Treehouse Points:</label>
+      <br>
+      <input #newTreehousePoints>
+    </div>
+    <button (click)="submitForm(newFirstName.value, newLastName.value, newTrack.value, newCurrentLanguage.value, newCurrentLevel.value, newTreehousePoints.value); newFirstName.value=''; newLastName.value=''; newTrack.value=''; newCurrentLanguage.value=''; newCurrentLevel.value=''; newTreehousePoints.value=''">Add</button>
+  </div>
+</div>
