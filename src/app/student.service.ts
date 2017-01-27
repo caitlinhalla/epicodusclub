@@ -14,4 +14,8 @@ export class StudentService {
     return this.students;
   }
 
+  getStudentById(studentId: string){
+    return this.angularFire.database.object('students/' + studentId);
+  }
+
 }

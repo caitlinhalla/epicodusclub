@@ -12,6 +12,7 @@ import { AboutComponent } from './about/about.component';
 import { StudentListComponent } from './student-list/student-list.component';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
+import { StudentDetailComponent } from './student-detail/student-detail.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -25,7 +26,8 @@ export const firebaseConfig = {
     AppComponent,
     IndexComponent,
     AboutComponent,
-    StudentListComponent
+    StudentListComponent,
+    StudentDetailComponent
   ],
   imports: [
     BrowserModule,

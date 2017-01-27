@@ -19,4 +19,8 @@ export class StudentListComponent implements OnInit {
     this.students = this.studentService.getStudents();
   }
 
+  goToDetailPage(clickedStudent){
+    this.router.navigate(['students', clickedStudent.$key]);
+  }
+
 }

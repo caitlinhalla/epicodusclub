@@ -1,4 +1,4 @@
-<md-card *ngFor="let student of students | async">
+<md-card *ngFor="let student of students | async" (click)="goToDetailPage(student)">
    <md-card-content>
       <h3>{{student.firstname}} {{student.lastname}}</h3>
       <p>{{student.track}}</p>
