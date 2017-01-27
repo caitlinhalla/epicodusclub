@@ -15,6 +15,7 @@ export class StudentListComponent implements OnInit {
   filterByLanguage: string = "allStudents";
   filterByLevel: string = "allStudents";
   filterByTrack: string = "allStudents";
+  currentRoute: string = this.router.url;
 
   constructor(private router: Router, private studentService: StudentService) { }
 

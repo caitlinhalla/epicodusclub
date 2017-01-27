@@ -22,4 +22,14 @@ export class StudentService {
     this.students.push(newStudent);
   }
 
+  updateStudent(localUpdatedStudent){
+    var studentEntryInFirebase = this.getStudentById(localUpdatedStudent.$key);
+    studentEntryInFirebase.update({firstname: localUpdatedStudent.firstname,
+                                   lastname: localUpdatedStudent.lastname,
+                                   track: localUpdatedStudent.track,
+                                   currentlanguage: localUpdatedStudent.currentlanguage,
+                                   currentlevel: localUpdatedStudent.currentlevel,
+                                   treehousepoints: localUpdatedStudent.treehousepoints});
+  }
+
 }

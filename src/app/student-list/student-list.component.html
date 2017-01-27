@@ -1,3 +1,5 @@
+<h1>Epicodus Students</h1>
+
 <select (change)="onLanguageChange($event.target.value)">
   <option value="allStudents" selected="selected">Current Language</option>
   <option value="rubyStudents">Ruby</option>
@@ -34,9 +36,14 @@
   <option value="allStudents">All Students</option>
 </select>
 
-<md-card *ngFor="let student of students | async | language:filterByLanguage | track:filterByTrack | level:filterByLevel" (click)="goToDetailPage(student)">
+<md-card *ngFor="let student of students | async | language:filterByLanguage | track:filterByTrack | level:filterByLevel">
    <md-card-content>
-      <h3>{{student.firstname}} {{student.lastname}}</h3>
-      <p>{{student.track}}</p>
+      <h3 (click)="goToDetailPage(student)">{{student.firstname}} {{student.lastname}}</h3>
+      <p>Track: {{student.track}}</p>
+      <div *ngIf="currentRoute === '/admin'">
+        <p>Level: {{student.currentlevel}}</p>
+        <hr>
+        <app-edit-student [selectedStudent]="student"></app-edit-student>
+      </div>
    </md-card-content>
 </md-card>

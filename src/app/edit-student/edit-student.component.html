@@ -1,0 +1,27 @@
+<h4>Edit Student</h4>
+
+<label>First Name:</label>
+<input [(ngModel)]="selectedStudent.firstname">
+<br>
+
+<label>Last Name:</label>
+<input [(ngModel)]="selectedStudent.lastname">
+<br>
+
+<label>Track:</label>
+<input [(ngModel)]="selectedStudent.track">
+<br>
+
+<label>Current Language:</label>
+<input [(ngModel)]="selectedStudent.currentlanguage">
+<br>
+
+<label>Current Level:</label>
+<input [(ngModel)]="selectedStudent.currentlevel">
+<br>
+
+<label>Treehouse Points:</label>
+<input [(ngModel)]="selectedStudent.treehousepoints">
+<br>
+
+<button (click)="beginUpdatingStudent(selectedStudent)">Update</button>

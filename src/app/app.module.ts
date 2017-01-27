@@ -17,6 +17,7 @@ import { LanguagePipe } from './language.pipe';
 import { TrackPipe } from './track.pipe';
 import { LevelPipe } from './level.pipe';
 import { AdminComponent } from './admin/admin.component';
+import { EditStudentComponent } from './edit-student/edit-student.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -35,7 +36,8 @@ export const firebaseConfig = {
     LanguagePipe,
     TrackPipe,
     LevelPipe,
-    AdminComponent
+    AdminComponent,
+    EditStudentComponent
   ],
   imports: [
     BrowserModule,
