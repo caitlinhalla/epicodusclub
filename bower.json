@@ -1,0 +1,21 @@
+{
+  "name": "epicodusclub",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Caitlin Ashtari <caitlinashtari@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1"
+  }
+}
