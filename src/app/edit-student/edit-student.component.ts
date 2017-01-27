@@ -19,4 +19,10 @@ export class EditStudentComponent implements OnInit {
     this.studentService.updateStudent(studentToUpdate);
   }
 
+  beginDeletingStudent(studentToDelete){
+    if(confirm("Are you sure you want to delete this student?")){
+      this.studentService.deleteStudent(studentToDelete);
+    }
+  }
+
 }

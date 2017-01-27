@@ -32,4 +32,9 @@ export class StudentService {
                                    treehousepoints: localUpdatedStudent.treehousepoints});
   }
 
+  deleteStudent(localStudentToDelete) {
+    var studentEntryInFirebase = this.getStudentById(localStudentToDelete.$key);
+    studentEntryInFirebase.remove();
+  }
+
 }
