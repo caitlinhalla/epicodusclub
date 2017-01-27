@@ -13,6 +13,8 @@ import { Router } from '@angular/router';
 export class StudentListComponent implements OnInit {
   students: FirebaseListObservable<any[]>;
   filterByLanguage: string = "allStudents";
+  filterByLevel: string = "allStudents";
+  filterByTrack: string = "allStudents";
 
   constructor(private router: Router, private studentService: StudentService) { }
 
@@ -24,8 +26,16 @@ export class StudentListComponent implements OnInit {
     this.router.navigate(['students', clickedStudent.$key]);
   }
 
-  onChange(optionFromMenu){
+  onLanguageChange(optionFromMenu){
     this.filterByLanguage = optionFromMenu;
+  }
+
+  onTrackChange(optionFromMenu){
+    this.filterByTrack = optionFromMenu;
+  }
+
+  onLevelChange(optionFromMenu){
+    this.filterByLevel = optionFromMenu;
   }
 
 }

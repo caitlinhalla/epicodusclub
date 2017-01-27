@@ -14,6 +14,8 @@ import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { StudentDetailComponent } from './student-detail/student-detail.component';
 import { LanguagePipe } from './language.pipe';
+import { TrackPipe } from './track.pipe';
+import { LevelPipe } from './level.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -29,7 +31,9 @@ export const firebaseConfig = {
     AboutComponent,
     StudentListComponent,
     StudentDetailComponent,
-    LanguagePipe
+    LanguagePipe,
+    TrackPipe,
+    LevelPipe
   ],
   imports: [
     BrowserModule,

@@ -11,7 +11,7 @@ export class LanguagePipe implements PipeTransform {
     var output: Student[] = [];
     if(desiredLanguage === "rubyStudents") {
       for(var i = 0; i < input.length; i++) {
-        if(input[i].currentlanguage === "Ruby"){
+        if(input[i].currentlanguage.toLowerCase() === "Ruby"){
           output.push(input[i]);
         }
       }
