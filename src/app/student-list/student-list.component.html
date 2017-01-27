@@ -1,4 +1,4 @@
-<!-- <select (change)="onChange($event.target.value)">
+<select (change)="onChange($event.target.value)">
   <option value="allStudents" selected="selected">All Students</option>
   <option value="rubyStudents">Ruby Students</option>
   <option value="phpStudents">PHP Students</option>
@@ -12,10 +12,10 @@
   <option value="androidStudents">Android Students</option>
   <option value="netStudents">.Net Students</option>
   <option value="designStudents">Design Students</option>
-</select> -->
+</select>
 
 
-<md-card *ngFor="let student of students | async" (click)="goToDetailPage(student)">
+<md-card *ngFor="let student of students | async | language:filterByLanguage" (click)="goToDetailPage(student)">
    <md-card-content>
       <h3>{{student.firstname}} {{student.lastname}}</h3>
       <p>{{student.track}}</p>

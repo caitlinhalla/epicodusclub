@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 })
 export class StudentListComponent implements OnInit {
   students: FirebaseListObservable<any[]>;
+  filterByLanguage: string = "allStudents";
 
   constructor(private router: Router, private studentService: StudentService) { }
 
@@ -21,6 +22,10 @@ export class StudentListComponent implements OnInit {
 
   goToDetailPage(clickedStudent){
     this.router.navigate(['students', clickedStudent.$key]);
+  }
+
+  onChange(optionFromMenu){
+    this.filterByLanguage = optionFromMenu;
   }
 
 }
