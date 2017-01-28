@@ -1,49 +1,53 @@
-<h1>Epicodus Students</h1>
+<h3>Epicodus Students</h3>
 
-<select (change)="onLanguageChange($event.target.value)">
-  <option value="allStudents" selected="selected">Current Language</option>
-  <option value="rubyStudents">Ruby</option>
-  <option value="phpStudents">PHP</option>
-  <option value="c#Students">C#</option>
-  <option value="cssStudents">CSS</option>
-  <option value="javaStudents">Java</option>
-  <option value="introStudents">Intro</option>
-  <option value="javaScriptStudents">JavaScript</option>
-  <option value="railsStudents">Rails</option>
-  <option value="drupalStudents">Drupal</option>
-  <option value="androidStudents">Android</option>
-  <option value="netStudents">.Net</option>
-  <option value="designStudents">Design</option>
-  <option value="allStudents">All Students</option>
-</select>
+<div class="selectBoxes">
+  <select (change)="onLanguageChange($event.target.value)">
+    <option value="allStudents" selected="selected">Current Language</option>
+    <option value="rubyStudents">Ruby</option>
+    <option value="phpStudents">PHP</option>
+    <option value="c#Students">C#</option>
+    <option value="cssStudents">CSS</option>
+    <option value="javaStudents">Java</option>
+    <option value="introStudents">Intro</option>
+    <option value="javaScriptStudents">JavaScript</option>
+    <option value="railsStudents">Rails</option>
+    <option value="drupalStudents">Drupal</option>
+    <option value="androidStudents">Android</option>
+    <option value="netStudents">.Net</option>
+    <option value="designStudents">Design</option>
+    <option value="allStudents">All Students</option>
+  </select>
 
- <select (change)="onTrackChange($event.target.value)">
-  <option value="allStudents" selected="selected">Track</option>
-  <option value="rubyStudents">Ruby</option>
-  <option value="phpStudents">PHP</option>
-  <option value="c#Students">C#</option>
-  <option value="cssStudents">CSS</option>
-  <option value="javaStudents">Java</option>
-  <option value="allStudents">All Students</option>
-</select>
+   <select (change)="onTrackChange($event.target.value)">
+    <option value="allStudents" selected="selected">Track</option>
+    <option value="rubyStudents">Ruby</option>
+    <option value="phpStudents">PHP</option>
+    <option value="c#Students">C#</option>
+    <option value="cssStudents">CSS</option>
+    <option value="javaStudents">Java</option>
+    <option value="allStudents">All Students</option>
+  </select>
 
-<select (change)="onLevelChange($event.target.value)">
-  <option value="allStudents" selected="selected">Current Level</option>
-  <option value="level1">Level 1</option>
-  <option value="level2">Level 2</option>
-  <option value="level3">Level 3</option>
-  <option value="internship">Internship</option>
-  <option value="allStudents">All Students</option>
-</select>
+  <select (change)="onLevelChange($event.target.value)">
+    <option value="allStudents" selected="selected">Current Level</option>
+    <option value="level1">Level 1</option>
+    <option value="level2">Level 2</option>
+    <option value="level3">Level 3</option>
+    <option value="internship">Internship</option>
+    <option value="allStudents">All Students</option>
+  </select>
+</div>
 
-<md-card *ngFor="let student of students | async | language:filterByLanguage | track:filterByTrack | level:filterByLevel">
-   <md-card-content>
-      <h3 (click)="goToDetailPage(student)">{{student.firstname}} {{student.lastname}}</h3>
-      <p>Track: {{student.track}}</p>
-      <div *ngIf="currentRoute === '/admin'">
-        <p>Level: {{student.currentlevel}}</p>
-        <hr>
-        <app-edit-student [selectedStudent]="student"></app-edit-student>
-      </div>
-   </md-card-content>
-</md-card>
+<div class="card">
+  <md-card *ngFor="let student of students | async | language:filterByLanguage | track:filterByTrack | level:filterByLevel">
+     <md-card-content>
+        <h3 (click)="goToDetailPage(student)">{{student.firstname}} {{student.lastname}}</h3>
+        <p>Track: {{student.track}}</p>
+        <div *ngIf="currentRoute === '/admin'">
+          <p>Level: {{student.currentlevel}}</p>
+          <hr>
+          <app-edit-student [selectedStudent]="student"></app-edit-student>
+        </div>
+     </md-card-content>
+  </md-card>
+</div>

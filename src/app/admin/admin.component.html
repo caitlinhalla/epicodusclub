@@ -1,4 +1,4 @@
-<div class="container panel panel-default">
+<div class="container panel">
   <div class="panel-heading">
     <h3>Add Student to Epicodus</h3>
   </div>
@@ -39,7 +39,7 @@
       <br>
       <input #newTreehousePoints [formControl]="form.controls['treehousepoints']">
     </div>
-    <button [disabled]="!form.valid" (click)="submitForm(newFirstName.value, newLastName.value, newTrack.value, newCurrentLanguage.value, newCurrentLevel.value, newTreehousePoints.value); newFirstName.value=null; newLastName.value=null; newTrack.value=null; newCurrentLanguage.value=null; newCurrentLevel.value=null; newTreehousePoints.value=''">Add</button>
+    <button class="btn" [disabled]="!form.valid" (click)="submitForm(newFirstName.value, newLastName.value, newTrack.value, newCurrentLanguage.value, newCurrentLevel.value, newTreehousePoints.value); newFirstName.value=null; newLastName.value=null; newTrack.value=null; newCurrentLanguage.value=null; newCurrentLevel.value=null; newTreehousePoints.value=''">Add</button>
   </div>
 </div>
 

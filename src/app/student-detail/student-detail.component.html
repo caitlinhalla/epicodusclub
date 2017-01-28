@@ -1,9 +1,11 @@
-<md-card>
-  <md-card-content>
-    <h3>{{(studentToDisplay | async)?.firstname}} {{(studentToDisplay | async)?.lastname}}</h3>
-    <p>Track: {{(studentToDisplay | async)?.track}}</p>
-    <p>Current Language: {{(studentToDisplay | async)?.currentlanguage}}</p>
-    <p>Current Level: {{(studentToDisplay | async)?.currentlevel}}</p>
-    <p>Treehouse Points: {{(studentToDisplay | async)?.treehousepoints}}</p>
-  </md-card-content>
-</md-card>
+<div class="card">
+  <md-card>
+    <md-card-content>
+      <h2>{{(studentToDisplay | async)?.firstname}} {{(studentToDisplay | async)?.lastname}}</h2>
+      <h4>Track: {{(studentToDisplay | async)?.track}}</h4>
+      <h4>Current Language: {{(studentToDisplay | async)?.currentlanguage}}</h4>
+      <h4>Current Level: {{(studentToDisplay | async)?.currentlevel}}</h4>
+      <h4>Treehouse Points: {{(studentToDisplay | async)?.treehousepoints}}</h4>
+    </md-card-content>
+  </md-card>
+</div>
